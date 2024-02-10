@@ -12,8 +12,7 @@ finish-args:
   - --socket=pulseaudio # Required for audio in LEGO Universe.
   - --device=dri # Required for OpenGL rendering in LEGO Universe.
   - --share=ipc # Required for X11.
-  - --share=network # LEGO Universe and patches in launcher require network access. 
-  - --filesystem=home:ro # User-provided client archives need to be readable.
+  - --share=network # LEGO Universe and patches in launcher require network access.
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.dotnet8
 add-extensions:
@@ -46,5 +45,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/TheNexusAvenger/Nexus-LU-Launcher.git
-        commit: 3e1c023e8f58541d5742f784d745f7b8f349b878
+        commit: 63a8874ea146fa816405c14067f60c4c422dfcf9
       - ./nuget-sources.json
