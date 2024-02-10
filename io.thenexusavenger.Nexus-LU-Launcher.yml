@@ -12,8 +12,7 @@ finish-args:
   - --socket=pulseaudio # Required for audio in LEGO Universe.
   - --device=dri # Required for OpenGL rendering in LEGO Universe.
   - --share=ipc # Required for X11.
-  - --share=network # LEGO Universe and patches in launcher require network access. 
-  - --filesystem=home:ro # User-provided client archives need to be readable.
+  - --share=network # LEGO Universe and patches in launcher require network access.
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.dotnet8
 add-extensions:
