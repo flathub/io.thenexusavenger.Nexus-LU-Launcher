@@ -40,7 +40,7 @@ modules:
   - name: Nexus-LU-Launcher
     buildsystem: simple
     build-commands:
-      - dotnet publish -c release -r linux-x64 --source ./nuget-sources
+      - dotnet publish -c release -r linux-x64 --source ./nuget-sources --p:RuntimeFrameworkVersion=8.0.1
       - cp ./Nexus.LU.Launcher.Gui/bin/Release/net8.0/linux-x64/publish/* /app/bin/
       - mv /app/bin/Nexus.LU.Launcher.Gui /app/bin/Nexus-LU-Launcher
       - install -Dm644 ./packaging/Flatpak/DesktopEntry.desktop /app/share/applications/${FLATPAK_ID}.desktop

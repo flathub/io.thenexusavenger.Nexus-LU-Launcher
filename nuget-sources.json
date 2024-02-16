@@ -169,13 +169,6 @@
     },
     {
         "type": "file",
-        "url": "https://api.nuget.org/v3-flatcontainer/rakdotnet.io/1.0.1/rakdotnet.io.1.0.1.nupkg",
-        "sha512": "95c3dbc94634362fdad1bd1025a73d3ab0d585817a8a1593cf57fe5284397f5f8378cb152bac08adf03907c52f36cb037ea94076ed3fa395b4194a20678c6be4",
-        "dest": "nuget-sources",
-        "dest-filename": "rakdotnet.io.1.0.1.nupkg"
-    },
-    {
-        "type": "file",
         "url": "https://api.nuget.org/v3-flatcontainer/runtime.linux-x64.microsoft.dotnet.ilcompiler/8.0.1/runtime.linux-x64.microsoft.dotnet.ilcompiler.8.0.1.nupkg",
         "sha512": "84b68ec60d51458489db1557d17c6dc6c4b77c091df7dc1cac168e692f2b6f4120ae2eb038438470cf5d64bb67444dd08450fd2e5b4fd53981fea2cdb1d9cb0a",
         "dest": "nuget-sources",
