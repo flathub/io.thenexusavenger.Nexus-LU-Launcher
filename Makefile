@@ -7,6 +7,8 @@ run:
 lint:
 	flatpak install -y flathub org.flatpak.Builder
 	flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest io.thenexusavenger.Nexus-LU-Launcher.yml
+update-sources:
+	python3 ./update-sources.py
 clean:
 	rm -rf .flatpak-builder
 	rm -rf build-dir

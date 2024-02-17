@@ -13,6 +13,10 @@ finish-args:
   - --device=dri # Required for OpenGL rendering in LEGO Universe.
   - --share=ipc # Required for X11.
   - --share=network # LEGO Universe and patches in launcher require network access.
+  - --filesystem=~/.local/share/Steam/logs:ro # Required for the "Steam One-Click" Patch to access the non-Steam games list on Arch-based systems (and probably most others).
+  - --filesystem=~/.local/share/Steam/userdata # Required for the "Steam One-Click" Patch to access the non-Steam games list on Arch-based systems (and probably most others).
+  - --filesystem=~/.steam/debian-installation/logs:ro # Required for the "Steam One-Click" Patch to access the non-Steam games list on Debian-based systems.
+  - --filesystem=~/.steam/debian-installation/userdata # Required for the "Steam One-Click" Patch to access the non-Steam games list on Debian-based systems.
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.dotnet8
 add-extensions:
@@ -45,5 +49,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/TheNexusAvenger/Nexus-LU-Launcher.git
-        commit: 63a8874ea146fa816405c14067f60c4c422dfcf9
+        commit: 6af771c141c6992ba270c5891a362d31285cfbda
       - ./nuget-sources.json
