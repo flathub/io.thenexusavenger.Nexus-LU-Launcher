@@ -1,8 +1,8 @@
 app-id: io.thenexusavenger.Nexus-LU-Launcher
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '24.08'
 base: org.winehq.Wine
-base-version: stable-23.08
+base-version: stable-24.08
 sdk: org.freedesktop.Sdk
 command: Nexus-LU-Launcher
 
@@ -18,11 +18,11 @@ finish-args:
   - --filesystem=~/.steam/debian-installation/logs:ro # Required for the "Steam One-Click" Patch to access the non-Steam games list on Debian-based systems.
   - --filesystem=~/.steam/debian-installation/userdata # Required for the "Steam One-Click" Patch to access the non-Steam games list on Debian-based systems.
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.dotnet8
+  - org.freedesktop.Sdk.Extension.dotnet9
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
     directory: lib/i386-linux-gnu
-    version: '23.08'
+    version: '24.08'
 inherit-extensions:
   - org.freedesktop.Platform.GL32
   - org.freedesktop.Platform.ffmpeg-full
@@ -32,22 +32,22 @@ inherit-extensions:
   - org.winehq.Wine.DLLs
 
 build-options:
-  append-path: /usr/lib/sdk/dotnet8/bin
-  append-ld-library-path: /usr/lib/sdk/dotnet8/lib
-  append-pkg-config-path: /usr/lib/sdk/dotnet8/lib/pkgconfig
+  append-path: /usr/lib/sdk/dotnet9/bin
+  append-ld-library-path: /usr/lib/sdk/dotnet9/lib
+  append-pkg-config-path: /usr/lib/sdk/dotnet9/lib/pkgconfig
 
 modules:
   - name: Nexus-LU-Launcher
     buildsystem: simple
     build-commands:
       - dotnet publish -c release -r linux-x64 --source ./nuget-sources
-      - cp ./Nexus.LU.Launcher.Gui/bin/Release/net8.0/linux-x64/publish/* /app/bin/
+      - cp ./Nexus.LU.Launcher.Gui/bin/Release/net9.0/linux-x64/publish/* /app/bin/
       - mv /app/bin/Nexus.LU.Launcher.Gui /app/bin/Nexus-LU-Launcher
-      - install -Dm644 ./packaging/Flatpak/DesktopEntry.desktop /app/share/applications/${FLATPAK_ID}.desktop
-      - install -Dm644 ./packaging/Flatpak/Icon.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
-      - install -Dm644 ./packaging/Flatpak/Metainfo.xml /app/share/metainfo/io.thenexusavenger.Nexus-LU-Launcher.metainfo.xml
+      - install -Dm644 ./packaging/Flatpak/DesktopEntry.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm644 ./packaging/Flatpak/Icon.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
+      - install -Dm644 ./packaging/Flatpak/Metainfo.xml ${FLATPAK_DEST}/share/metainfo/io.thenexusavenger.Nexus-LU-Launcher.metainfo.xml
     sources:
       - type: git
         url: https://github.com/TheNexusAvenger/Nexus-LU-Launcher.git
-        commit: cf7c4477bdeeeca28d52c94d10561ad5d48daed3
+        commit: 487a377608fcf1240f134376cd55cfb19cfc0405
       - ./nuget-sources.json

@@ -38,4 +38,4 @@ if not os.path.exists(repositoryPath):
     subprocess.Popen(["git", "reset", "--hard", commit], cwd=repositoryPath).wait()
 
 # Run the script.
-subprocess.Popen(["python3", generatorFilePath, "--freedesktop", freedesktopVersion, "--dotnet", dotnetVersion, "--runtime", "linux-x64", "nuget-sources.json", os.path.join(repositoryPath, "Nexus.LU.Launcher.Gui", "Nexus.LU.Launcher.Gui.csproj")]).wait()
+subprocess.Popen(["python3", generatorFilePath, "nuget-sources.json", os.path.join(repositoryPath, "Nexus.LU.Launcher.Gui", "Nexus.LU.Launcher.Gui.csproj"), "--freedesktop", freedesktopVersion, "--dotnet", dotnetVersion, "--runtime", "linux-x64"]).wait()
