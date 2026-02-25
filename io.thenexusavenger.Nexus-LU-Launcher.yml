@@ -27,7 +27,6 @@ inherit-extensions:
   - org.freedesktop.Platform.GL32
   - org.winehq.Wine.gecko
   - org.winehq.Wine.mono
-  - org.winehq.Wine.DLLs
 
 build-options:
   append-path: /usr/lib/sdk/dotnet9/bin
