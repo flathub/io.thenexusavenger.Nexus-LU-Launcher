@@ -1,8 +1,8 @@
 app-id: io.thenexusavenger.Nexus-LU-Launcher
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 base: org.winehq.Wine
-base-version: stable-24.08
+base-version: stable-25.08
 sdk: org.freedesktop.Sdk
 command: Nexus-LU-Launcher
 
@@ -22,7 +22,7 @@ sdk-extensions:
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
     directory: lib/i386-linux-gnu
-    version: '24.08'
+    version: '25.08'
 inherit-extensions:
   - org.freedesktop.Platform.GL32
   - org.freedesktop.Platform.ffmpeg-full
@@ -49,5 +49,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/TheNexusAvenger/Nexus-LU-Launcher.git
-        commit: 487a377608fcf1240f134376cd55cfb19cfc0405
+        commit: e38eaca96cbf208c73cd1e97cfb2684356abf19a
       - ./nuget-sources.json
