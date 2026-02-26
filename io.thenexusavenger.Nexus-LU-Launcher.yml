@@ -44,5 +44,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/TheNexusAvenger/Nexus-LU-Launcher.git
-        commit: e38eaca96cbf208c73cd1e97cfb2684356abf19a commit: 487a377608fcf1240f134376cd55cfb19cfc0405
+        commit: e38eaca96cbf208c73cd1e97cfb2684356abf19a
       - ./nuget-sources.json
