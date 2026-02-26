@@ -1,5 +1,6 @@
 app-id: io.thenexusavenger.Nexus-LU-Launcher
-runtime: org.freedesktop.Platformruntime-version: '25.08'
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
 base: org.winehq.Wine
 base-version: stable-25.08
 sdk: org.freedesktop.Sdk
@@ -43,5 +44,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/TheNexusAvenger/Nexus-LU-Launcher.git
-        commit: e38eaca96cbf208c73cd1e97cfb2684356abf19a
+        commit: e38eaca96cbf208c73cd1e97cfb2684356abf19a commit: 487a377608fcf1240f134376cd55cfb19cfc0405
       - ./nuget-sources.json
