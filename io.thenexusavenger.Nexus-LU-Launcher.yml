@@ -1,6 +1,5 @@
 app-id: io.thenexusavenger.Nexus-LU-Launcher
-runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime: org.freedesktop.Platformruntime-version: '25.08'
 base: org.winehq.Wine
 base-version: stable-25.08
 sdk: org.freedesktop.Sdk
@@ -19,12 +18,10 @@ finish-args:
   - --filesystem=~/.steam/debian-installation/userdata # Required for the "Steam One-Click" Patch to access the non-Steam games list on Debian-based systems.
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.dotnet9
-add-extensions:
-  org.freedesktop.Platform.Compat.i386:
-    directory: lib/i386-linux-gnu
-    version: '25.08'
 inherit-extensions:
+  - org.freedesktop.Platform.Compat.i386
   - org.freedesktop.Platform.GL32
+  - org.freedesktop.Platform.codecs_extra.i386
   - org.winehq.Wine.gecko
   - org.winehq.Wine.mono
 
