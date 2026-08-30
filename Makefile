@@ -1,5 +1,5 @@
 build:
-	flatpak install -y org.freedesktop.Sdk//25.08 org.freedesktop.Platform//25.08 org.freedesktop.Sdk.Compat.i386/x86_64/25.08 org.winehq.Wine/x86_64/stable-25.08 org.freedesktop.Sdk.Extension.dotnet9//25.08
+	flatpak install -y org.freedesktop.Sdk//25.08 org.freedesktop.Platform//25.08 org.freedesktop.Sdk.Compat.i386/x86_64/25.08 org.winehq.Wine/x86_64/stable-25.08 org.freedesktop.Sdk.Extension.dotnet10//25.08
 	flatpak-builder --ccache --force-clean build-dir io.thenexusavenger.Nexus-LU-Launcher.yml
 	flatpak-builder --force-clean --user --install build-dir io.thenexusavenger.Nexus-LU-Launcher.yml
 run:
